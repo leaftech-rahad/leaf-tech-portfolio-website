@@ -1,0 +1,5 @@
+run npx create-next-app .
+
+
+run npx prisma init
+
