@@ -3,16 +3,10 @@ import React from "react";
 const Footer = () => {
   return (
     <>
-      <footer className=" font-mono bg-[#161B22] text-white  box-border flex flex-col items-end  flex-wrap py-1 ">
-        <p className=" pr-5">
-          Designed by{" "}
-          <span>
-            <a>@FahimaJahan</a>
-          </span>
-        </p>
-        <p className=" pr-5">
-          Developed by{" "}
-          <span>
+      <footer className=" bg-[#161B22] flex flex-col items-end  flex-wrap ">
+        <p className=" pr-5 p-4 text-right">
+          Designed & Developed by{" "}
+          <span className="text-green-600 font-bold">
             <a>@FaisalAhamedRahad</a>
           </span>
         </p>
