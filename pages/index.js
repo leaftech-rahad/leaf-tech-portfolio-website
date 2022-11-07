@@ -162,11 +162,11 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className=" flex flex-row max-sm:flex-col flex-wrap justify-evenly items-start  m-4 pt-20 pb-20 max-sm:gap-8 text-blue-500 ">
+      <div className=" flex flex-row max-sm:flex-col flex-wrap justify-evenly items-start  m-4 pt-10 pb-10 max-sm:gap-8 text-blue-500 ">
         <div className=" w-1/4 p-4 max-lg:w-full max-sm:p-0  flex flex-wrap items-center flex-col ">
           <GoBrowser className=" text-5xl  " />
           <p className=" text-3xl">Frontend</p>
-          <p className="text-green-500 text-justify  text-lg font-sans">
+          <p className="text-green-500 text-justify  text-md font-sans">
             <span className="font-bold text-blue-500">Frontend</span> looks and
             design of a website does matter. It is the first thing that a user
             comes in contact with when visiting a website. No matter how fast
@@ -189,7 +189,7 @@ export default function Home() {
         <div className=" w-1/4 p-4  max-lg:w-full max-sm:p-0 flex flex-wrap items-center flex-col ">
           <FaServer className=" text-5xl " />
           <p className=" text-3xl ">Backend</p>
-          <p className="text-green-500 text-justify  text-lg font-sans">
+          <p className="text-green-500 text-justify  text-md font-sans">
             After the Frontend comes{" "}
             <span className="font-bold text-blue-500">Backend</span>, which is
             by all means the brain of a website. It controls{" "}
@@ -210,7 +210,7 @@ export default function Home() {
         <div className="  w-1/4 p-4 max-lg:w-full max-sm:p-0 flex flex-wrap items-center flex-col ">
           <MdVerifiedUser className=" text-5xl " />
           <p className=" text-3xl ">Authentication</p>
-          <p className="text-green-500 text-justify  text-lg font-sans">
+          <p className="text-green-500 text-justify  text-md font-sans">
             <span className="font-bold text-blue-500">Authentication</span> is a
             vital part of any signin based website, where each user have their
             unique set of priviledges and services. There are two methods of
@@ -227,7 +227,7 @@ export default function Home() {
         <div className="  w-1/4 p-4 max-lg:w-full max-sm:p-0 flex flex-wrap items-center flex-col ">
           <FaDatabase className=" text-5xl " />
           <p className=" text-3xl ">Database</p>
-          <p className="text-green-500 text-justify  text-lg font-sans">
+          <p className="text-green-500 text-justify  text-md font-sans">
             <span className="font-bold text-blue-500">Database</span> stores all
             necessy data that a dynamic website needs to work.
             <span className="font-bold text-blue-500"> NoSQL</span> and{" "}
