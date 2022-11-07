@@ -162,8 +162,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className=" flex flex-row max-sm:flex-col flex-wrap justify-evenly items-start  m-4 pt-10 pb-10 max-sm:gap-8 text-blue-500 ">
-        <div className=" w-1/4 p-4 max-lg:w-full max-sm:p-0  flex flex-wrap items-center flex-col ">
+      <div className=" flex flex-row flex-wrap justify-evenly  m-4 pt-10 pb-10 max-sm:gap-8 text-blue-500 gap-1 ">
+        <div className="  xl:max-w-xs  2xl:max-w-md bg-[#161B22]   p-4  max-sm:p-4  flex flex-wrap items-center flex-col border-2 rounded-lg border-stone-700 ">
           <GoBrowser className=" text-5xl  " />
           <p className=" text-3xl">Frontend</p>
           <p className="text-green-500 text-justify  text-md font-sans">
@@ -186,7 +186,7 @@ export default function Home() {
             Frontend appealing and user friendly.
           </p>
         </div>
-        <div className=" w-1/4 p-4  max-lg:w-full max-sm:p-0 flex flex-wrap items-center flex-col ">
+        <div className=" xl:max-w-xs 2xl:max-w-md bg-[#161B22]  p-4   max-sm:p-4 flex flex-wrap items-center flex-col border-2 rounded-lg border-stone-700">
           <FaServer className=" text-5xl " />
           <p className=" text-3xl ">Backend</p>
           <p className="text-green-500 text-justify  text-md font-sans">
@@ -207,7 +207,7 @@ export default function Home() {
             then 3 years as my Backend.
           </p>
         </div>
-        <div className="  w-1/4 p-4 max-lg:w-full max-sm:p-0 flex flex-wrap items-center flex-col ">
+        <div className=" xl:max-w-xs 2xl:max-w-md bg-[#161B22]  p-4  max-sm:p-4 flex flex-wrap items-center flex-col border-2 rounded-lg border-stone-700">
           <MdVerifiedUser className=" text-5xl " />
           <p className=" text-3xl ">Authentication</p>
           <p className="text-green-500 text-justify  text-md font-sans">
@@ -224,7 +224,7 @@ export default function Home() {
             <span className="font-bold text-blue-500">Next-Auth</span>.
           </p>
         </div>
-        <div className="  w-1/4 p-4 max-lg:w-full max-sm:p-0 flex flex-wrap items-center flex-col ">
+        <div className=" xl:max-w-xs 2xl:max-w-md bg-[#161B22]  p-4  sm:p-4 flex flex-wrap items-center flex-col border-2 rounded-lg border-stone-700">
           <FaDatabase className=" text-5xl " />
           <p className=" text-3xl ">Database</p>
           <p className="text-green-500 text-justify  text-md font-sans">
