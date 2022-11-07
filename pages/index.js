@@ -162,65 +162,92 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className=" flex flex-row max-sm:flex-col flex-wrap justify-evenly items-center  m-4 pt-20 pb-20 max-sm:gap-8 text-blue-500">
+      <div className=" flex flex-row max-sm:flex-col flex-wrap justify-evenly items-start  m-4 pt-20 pb-20 max-sm:gap-8 text-blue-500 ">
         <div className=" w-1/4 p-4 max-lg:w-full max-sm:p-0  flex flex-wrap items-center flex-col ">
           <GoBrowser className=" text-5xl  " />
-          <p className=" text-2xl">Frontend</p>
-          <p className="text-green-500">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
+          <p className=" text-3xl">Frontend</p>
+          <p className="text-green-500 text-justify  text-lg font-sans">
+            <span className="font-bold text-blue-500">Frontend</span> looks and
+            design of a website does matter. It is the first thing that a user
+            comes in contact with when visiting a website. No matter how fast
+            and efficient a webapp is people will always judge a book by
+            it&apos;s cover. As of now{" "}
+            <span className="font-bold text-blue-500">React</span> is the most
+            loved and sought after frontend framework for developing the
+            frontend. I use{" "}
+            <span className="font-bold text-blue-500">Next.js</span> which is
+            based on <span className="font-bold text-blue-500">React</span>. As
+            it helps me to get the best result and design flexibility which
+            comes with <span className="font-bold text-blue-500">React</span>{" "}
+            and also develop the Backend in{" "}
+            <span className="font-bold text-blue-500">Node.js</span>, that{" "}
+            <span className="font-bold text-blue-500">Next.js</span> runs under
+            the hood by default. As a developer i try my best to make the
+            Frontend appealing and user friendly.
           </p>
         </div>
         <div className=" w-1/4 p-4  max-lg:w-full max-sm:p-0 flex flex-wrap items-center flex-col ">
           <FaServer className=" text-5xl " />
-          <p className=" text-2xl ">Backend</p>
-          <p className="text-green-500">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
+          <p className=" text-3xl ">Backend</p>
+          <p className="text-green-500 text-justify  text-lg font-sans">
+            After the Frontend comes{" "}
+            <span className="font-bold text-blue-500">Backend</span>, which is
+            by all means the brain of a website. It controls{" "}
+            <span className=" font-bold text-blue-500">
+              Dataflow, Authentication, CRUD operations
+            </span>{" "}
+            and much more. If a website is not optimized in the Backend it
+            doesn&apos;t matter how good and elegent it looks. Users will avoid
+            it for how slow it works. So optimizing the Backend is much of
+            importance as designing the Frontend if not more.{" "}
+            <span className="font-bold text-blue-500">Node.js</span> is the most
+            used server environment in the world. It users Chromes V8 Javascript
+            engine making it really fast. I&apos;ve been using{" "}
+            <span className="font-bold text-blue-500">Node.js</span> for more
+            then 3 years as my Backend.
           </p>
         </div>
         <div className="  w-1/4 p-4 max-lg:w-full max-sm:p-0 flex flex-wrap items-center flex-col ">
           <MdVerifiedUser className=" text-5xl " />
-          <p className=" text-2xl ">Authentication & Security</p>
-          <p className="text-green-500">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
+          <p className=" text-3xl ">Authentication</p>
+          <p className="text-green-500 text-justify  text-lg font-sans">
+            <span className="font-bold text-blue-500">Authentication</span> is a
+            vital part of any signin based website, where each user have their
+            unique set of priviledges and services. There are two methods of
+            authentication{" "}
+            <span className="font-bold text-blue-500">Session</span> based &{" "}
+            <span className="font-bold text-blue-500">Token</span> based. Each
+            has their own set of advantages and cons. I&apos;ve worked with both{" "}
+            <span className="font-bold text-blue-500">Session</span> with{" "}
+            <span className="font-bold text-blue-500">Passport.js</span> and{" "}
+            <span className="font-bold text-blue-500">Token</span> with{" "}
+            <span className="font-bold text-blue-500">Next-Auth</span>.
           </p>
         </div>
         <div className="  w-1/4 p-4 max-lg:w-full max-sm:p-0 flex flex-wrap items-center flex-col ">
           <FaDatabase className=" text-5xl " />
-          <p className=" text-2xl ">Database</p>
-          <p className="text-green-500">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
+          <p className=" text-3xl ">Database</p>
+          <p className="text-green-500 text-justify  text-lg font-sans">
+            <span className="font-bold text-blue-500">Database</span> stores all
+            necessy data that a dynamic website needs to work.
+            <span className="font-bold text-blue-500"> NoSQL</span> and{" "}
+            <span className="font-bold text-blue-500">Relational</span>
+            database are mostly used for general purpose.{" "}
+            <span className="font-bold text-blue-500">
+              MongoDB, PostgreSQL, MySQL
+            </span>{" "}
+            are the most popular by far. Aside from using these databases
+            I&apos;ve also used them with popular{" "}
+            <span className="font-bold text-blue-500">ORMs </span>
+            like <span className="font-bold text-blue-500">
+              Prisma
+            </span> and{" "}
+            <span className="font-bold text-blue-500">Sequelize</span>, which
+            makes interacting with databases easier and makes the development
+            process very rapid. Lastly as a plus point, I&apos;ve seen{" "}
+            <span className="font-bold text-blue-500">GraphQL</span> gaining a
+            lot of love in the dev community so I&apos;ve put some effort to
+            learn it as well.
           </p>
         </div>
       </div>
