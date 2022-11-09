@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { BiMenu, BiX } from "react-icons/bi";
+import Button from "../components/Button";
 
 const Navbar = () => {
   const menu_burger = [1, 2, 3];
@@ -35,30 +36,22 @@ const Navbar = () => {
         <ul className=" max-md:hidden flex ">
           <li className="">
             <Link href={"projects"}>
-              <button className=" hover:bg-slate-500 rounded-lg px-1 py-1  border-solid border-2 mx-1">
-                Projects
-              </button>
+              <Button button_text={"Projects"} />
             </Link>
           </li>
           <li className=" ">
             <Link href={"portfolio"}>
-              <button className=" hover:bg-slate-500 rounded-lg px-1 py-1  border-solid border-2 mx-1 ">
-                Portfolio
-              </button>
+              <Button button_text={"Portfolio"} />
             </Link>
           </li>
           <li className=" ">
             <Link href={"contact"}>
-              <button className=" hover:bg-slate-500 rounded-lg px-1 py-1  border-solid border-2 mx-1">
-                Contact me
-              </button>
+              <Button button_text={"Contact me"} />
             </Link>
           </li>
           <li className="">
             <Link href={"code_bits"}>
-              <button className=" hover:bg-slate-500 rounded-lg px-2 py-1  border-solid border-2 mr-5 ">
-                Code_Bits
-              </button>
+              <Button button_text={"Code_Bits"} />
             </Link>
           </li>
         </ul>
