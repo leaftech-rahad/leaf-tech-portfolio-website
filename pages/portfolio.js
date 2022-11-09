@@ -5,7 +5,7 @@ export default function portfolio() {
   return (
     <div>
       <div className=" flex flex-col flex-wrap m-4  gap-8  items-center justify-evenly pb-5 pt-5">
-        <div className=" w-full md:w-2/3 bg-[#161B22] p-6 rounded-2xl text-lg md:text-lg 2xl:text-3xl flex flex-col flex-wrap items-center">
+        <div className=" w-full md:w-2/3 bg-[#161B22] p-6 rounded-2xl text-lg md:text-lg 2xl:text-xl flex flex-col flex-wrap items-center">
           <h1 className=" text-3xl font-bold">IELTS</h1>
           <p className=" text-center">
             International English Language Testing System
@@ -58,7 +58,7 @@ export default function portfolio() {
             </tbody>
           </table>
         </div>
-        <div className=" w-full md:w-2/3 bg-[#161B22] p-6 rounded-2xl text-lg md:text-lg 2xl:text-3xl flex flex-col flex-wrap items-center">
+        <div className=" w-full md:w-2/3 bg-[#161B22] p-6 rounded-2xl text-lg md:text-lg 2xl:text-xl flex flex-col flex-wrap items-center">
           <h1 className=" text-3xl font-bold">M.Sc</h1>
           <p className=" text-center">Master of Science</p>
           <p>Jahangirnagar University</p>
@@ -88,7 +88,7 @@ export default function portfolio() {
             </tbody>
           </table>
         </div>
-        <div className=" w-full md:w-2/3 bg-[#161B22] p-6 rounded-2xl text-lg md:text-lg 2xl:text-3xl flex flex-col flex-wrap items-center">
+        <div className=" w-full md:w-2/3 bg-[#161B22] p-6 rounded-2xl text-lg md:text-lg 2xl:text-xl flex flex-col flex-wrap items-center">
           <h1 className=" text-3xl font-bold">B.Sc</h1>
           <p className=" text-center">
             Bachalor of Science &#10098;Honours&#10099;
@@ -121,7 +121,7 @@ export default function portfolio() {
           </table>
         </div>
 
-        <div className=" w-full md:w-2/3 bg-[#161B22] p-6 rounded-2xl text-lg md:text-lg 2xl:text-3xl flex flex-col flex-wrap items-center">
+        <div className=" w-full md:w-2/3 bg-[#161B22] p-6 rounded-2xl text-lg md:text-lg 2xl:text-xl flex flex-col flex-wrap items-center">
           <h1 className=" text-3xl font-bold">HSC</h1>
           <p className=" text-center">Higher Secondary School Cirtificate</p>
           <p>Bepza Public College</p>
@@ -151,7 +151,7 @@ export default function portfolio() {
             </tbody>
           </table>
         </div>
-        <div className=" w-full md:w-2/3 bg-[#161B22] p-6 rounded-2xl text-lg md:text-lg 2xl:text-3xl flex flex-col flex-wrap items-center">
+        <div className=" w-full md:w-2/3 bg-[#161B22] p-6 rounded-2xl text-lg md:text-lg 2xl:text-xl flex flex-col flex-wrap items-center">
           <h1 className=" text-3xl font-bold">SSC </h1>
           <p>Secondary School Cirtificate</p>
           <p>Adarsha High School</p>
