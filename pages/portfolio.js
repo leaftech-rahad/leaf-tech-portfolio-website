@@ -10,24 +10,11 @@ export default function portfolio() {
           <p className=" text-center">
             International English Language Testing System
           </p>
-
           <table className=" text-center border-stone-500 border border-collapse ">
             <thead>
               <tr className="border-stone-500 border border-collapse">
                 <th className="border-stone-500 border border-collapse p-2">
                   Overal Band Score
-                </th>
-                <th className="border-stone-500 border border-collapse p-2">
-                  Listening
-                </th>
-                <th className="border-stone-500 border border-collapse p-2">
-                  Reading
-                </th>
-                <th className="border-stone-500 border border-collapse p-2">
-                  Writing
-                </th>
-                <th className="border-stone-500 border border-collapse p-2">
-                  Speaking
                 </th>
                 <th className="border-stone-500 border border-collapse p-2">
                   Passing Year
@@ -38,18 +25,6 @@ export default function portfolio() {
               <tr>
                 <td className="border-stone-500 border border-collapse p-2">
                   7.0 out of 9
-                </td>
-                <td className="border-stone-500 border border-collapse p-2">
-                  7.5 out of 9
-                </td>
-                <td className="border-stone-500 border border-collapse p-2">
-                  7.0 out of 9
-                </td>
-                <td className="border-stone-500 border border-collapse p-2">
-                  6.5 out of 9
-                </td>
-                <td className="border-stone-500 border border-collapse p-2">
-                  6.5 out of 9
                 </td>
                 <td className="border-stone-500 border border-collapse">
                   2022
@@ -187,7 +162,7 @@ export default function portfolio() {
           rel="noopener noreferrer"
           download
         >
-          <Button button_text={"Download my CV"} />
+          <Button button_text={"Download CV"} />
         </a>
       </div>
     </div>
