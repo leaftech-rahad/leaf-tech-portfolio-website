@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../components/Button";
+import Button from "../components/button";
 
 export default function portfolio() {
   return (
@@ -10,7 +10,7 @@ export default function portfolio() {
           <p className=" text-center">
             International English Language Testing System
           </p>
-          <table className=" text-center border-stone-500 border border-collapse ">
+          <table className=" text-center border-stone-500 border border-collapse  ">
             <thead>
               <tr className="border-stone-500 border border-collapse">
                 <th className="border-stone-500 border border-collapse p-2">
@@ -128,7 +128,7 @@ export default function portfolio() {
         </div>
         <div className=" w-full md:w-2/3 bg-[#161B22] p-6 rounded-2xl text-lg md:text-lg 2xl:text-xl flex flex-col flex-wrap items-center">
           <h1 className=" text-3xl font-bold">SSC </h1>
-          <p>Secondary School Cirtificate</p>
+          <p className=" text-center">Secondary School Cirtificate</p>
           <p>Adarsha High School</p>
           <address>Ashulia, Savar, Dhaka.</address>
           <table className=" text-center border-stone-500 border border-collapse ">

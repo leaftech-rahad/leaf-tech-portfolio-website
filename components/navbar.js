@@ -3,17 +3,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { BiMenu, BiX } from "react-icons/bi";
-import Button from "../components/Button";
+import Button from "../components/button";
 
 const Navbar = () => {
-  const menu_burger = [1, 2, 3];
-
   const [dropmenu, setDropmenu] = useState(false);
-
+  const isLoggedin = true;
   const showMenu = (event) => {
     setDropmenu((current) => !current);
   };
-
+  const signout = false;
   return (
     <div className="flex flex-col flex-wrap justify-between sticky top-0">
       <Head>
@@ -46,7 +44,7 @@ const Navbar = () => {
           </li>
           <li className=" ">
             <Link href={"contact"}>
-              <Button button_text={"Contact me"} />
+              <Button button_text={"Contact_me"} />
             </Link>
           </li>
           <li className="">
@@ -54,6 +52,29 @@ const Navbar = () => {
               <Button button_text={"Code_Bits"} />
             </Link>
           </li>
+          <li className="">
+            <Link href={"signup"}>
+              <Button button_text={"Sign up"} />
+            </Link>
+          </li>
+          {isLoggedin ? (
+            <li className="">
+              <Link href={"login"}>
+                <Button button_text={"Login"} />
+              </Link>
+            </li>
+          ) : (
+            ""
+          )}
+          {isLoggedin ? (
+            <li className="">
+              <Link href={"logout"}>
+                <Button button_text={"Logout"} />
+              </Link>
+            </li>
+          ) : (
+            ""
+          )}
         </ul>
         <div className=" md:hidden overflow-hidden mr-3" onClick={showMenu}>
           <button className="  md:hidden  text-xl flex flex-col  p-2">
@@ -82,7 +103,7 @@ const Navbar = () => {
               href="contact"
               className=" hover:bg-slate-700 px-6 py-2 rounded block"
             >
-              Contact me
+              Contact_me
             </Link>
             <Link
               href="code_bits"
@@ -90,6 +111,28 @@ const Navbar = () => {
             >
               Code_Bits
             </Link>
+            <Link
+              href="signup"
+              className=" hover:bg-slate-700 px-6 py-2 rounded block"
+            >
+              Sign up
+            </Link>
+            <Link
+              href="login"
+              className=" hover:bg-slate-700 px-6 py-2 rounded block"
+            >
+              Login
+            </Link>
+            {!signout ? (
+              <Link
+                href="logout"
+                className=" hover:bg-slate-700 px-6 py-2 rounded block"
+              >
+                Logout
+              </Link>
+            ) : (
+              ""
+            )}
           </div>
         </div>
       </nav>

@@ -162,8 +162,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className=" flex flex-row flex-wrap justify-evenly  m-4 pt-10 pb-10 max-sm:gap-8 text-blue-500 gap-1 ">
-        <div className="  xl:max-w-xs  2xl:max-w-md bg-[#161B22]   p-4  max-sm:p-4  flex flex-wrap items-center flex-col border-2 rounded-lg border-stone-700 ">
+      <div className=" flex flex-row flex-wrap justify-evenly  m-4 pt-10 pb-10 gap-8 2xl:gap-1 xl:gap-1  text-blue-500  ">
+        <div className="  xl:max-w-xs  2xl:max-w-md bg-[#161B22]   p-4  flex flex-wrap items-center flex-col border-2 rounded-lg border-stone-700 ">
           <GoBrowser className=" text-5xl  " />
           <p className=" text-3xl">Frontend</p>
           <p className="text-green-500 text-justify  text-md font-sans">
