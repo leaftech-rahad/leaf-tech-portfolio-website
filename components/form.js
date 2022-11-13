@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import Button from "../components/button";
 import Input from "../components/input";
 import Link from "next/link";
