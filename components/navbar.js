@@ -91,13 +91,13 @@ const Navbar = () => {
           ) : (
             ""
           )}
-          <button className="  md:hidden  text-xl flex flex-col  p-2">
+          <button className="  md:hidden  text-xl flex flex-col p-1 border-2 rounded hover:text-green-500 hover:border-green-500">
             {dropmenu ? <BiX /> : <BiMenu />}
           </button>
           <div
             className={
               dropmenu
-                ? "block   md:hidden text-white  box-border  bg-gray-900  p-1 rounded fixed top-16 right-0 text-lg"
+                ? "block   md:hidden text-white  box-border  bg-gray-900  p-1 rounded fixed top-16 right-0 text-lg mr-2"
                 : "hidden    md:hidden text-white  box-border  bg-gray-900  p-1 rounded fixed top-16 right-0 text-lg"
             }
           >
