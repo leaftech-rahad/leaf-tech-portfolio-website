@@ -46,6 +46,7 @@ export default NextAuth({
               phone: credentials.phone,
               address: credentials.address,
               password: (await encrypt(credentials.password)).toString(),
+              photo: null,
             },
           });
         }
