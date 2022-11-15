@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../components/button";
 
-export default function portfolio() {
+export default function Portfolio() {
   return (
     <div>
       <div className=" flex flex-col flex-wrap m-4  gap-8  items-center justify-evenly pb-5 pt-5">

@@ -1,18 +1,31 @@
-import React from "react";
+/* import * as React from "react";
 import Card from "../components/card";
 import Form from "../components/form";
-import { FaUserAlt } from "react-icons/fa";
-const signup = () => {
+
+import { getCsrfToken } from "next-auth/react";
+
+export async function getServerSideProps(context) {
+  return {
+    props: {
+      csrfToken: await getCsrfToken(context),
+    },
+  };
+}
+ */
+const Signup = ({ csrfToken }) => {
   return (
-    <div className=" m-auto md:mt-20 md:w-[440px]">
+    <>
+      {/* <div className=" m-auto md:mt-20 md:w-[440px]">
       <Card>
-        <p className=" flex justify-center text-4xl pb-2 text-blue-500 ">
-          <FaUserAlt />
-        </p>
-        <Form signupForm></Form>
+        <Form
+          signupForm
+          csrfToken={csrfToken}
+          action="/api/auth/callback/credentials"
+        ></Form>
       </Card>
-    </div>
+    </div> */}
+    </>
   );
 };
 
-export default signup;
+export default Signup;

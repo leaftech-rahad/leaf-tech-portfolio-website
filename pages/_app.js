@@ -1,10 +1,32 @@
 import "../styles/globals.css";
+import React from "react";
 import Layout from "../components/layout";
-function MyApp({ Component, pageProps }) {
+import { SessionProvider } from "next-auth/react";
+import { Hydrate, QueryClientProvider, QueryClient } from "react-query";
+
+function MyApp({ Component, pageProps, session }) {
+  const [queryClient] = React.useState(
+    () =>
+      new QueryClient({
+        defaultOptions: {
+          queries: {
+            refetchOnMount: false,
+            refetchOnWindowFocus: false,
+            refetchOnReconnect: false,
+          },
+        },
+      })
+  );
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <SessionProvider session={session}>
+      <QueryClientProvider client={queryClient}>
+        <Hydrate state={pageProps.dehydratedState}>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </Hydrate>
+      </QueryClientProvider>
+    </SessionProvider>
   );
 }
 

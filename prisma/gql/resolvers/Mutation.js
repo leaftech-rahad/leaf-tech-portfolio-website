@@ -1,9 +1,9 @@
 import prisma from "../../db";
-/* console.log(prisma); */
+import bcrypt from "bcryptjs";
 export const Mutation = {
   signup: async (parent, { input }, { req }) => {
     //destructure from input
-    /* const {
+    const {
       firstName,
       lastName,
       email,
@@ -12,23 +12,24 @@ export const Mutation = {
       address,
       password,
       photo,
-    } = input; */
+    } = input;
+    async function encrypt(password) {
+      const salt = bcrypt.genSaltSync(10);
+      const hash = bcrypt.hashSync(password, salt);
+      return hash;
+    }
 
     const savingUserData = await prisma.user.create({
-      /* data: {
+      data: {
         firstName: firstName,
         lastName: lastName,
         email: email,
         userName: userName,
         phone: phone,
         address: address,
-        password: password,
+        password: (await encrypt(password)).toString(),
         photo: photo,
-
-        //hashing the password value using encrypt function in bcrypt.js
-        // password: (await encrypt(password)).toString(),
-      }, */
-      data: input,
+      },
     });
     return savingUserData;
   },

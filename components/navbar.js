@@ -1,13 +1,21 @@
+import React from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { BiMenu, BiX } from "react-icons/bi";
 import Button from "../components/button";
+import { useSession } from "next-auth/react";
 
 const Navbar = () => {
+  var { data: session, status } = useSession();
+
   const [dropmenu, setDropmenu] = useState(false);
-  const isLoggedin = true;
+
+  var isLoggedin;
+  if (status === "authenticated") {
+    isLoggedin = true;
+  }
   const showMenu = (event) => {
     setDropmenu((current) => !current);
   };
@@ -31,12 +39,15 @@ const Navbar = () => {
           />
         </Link>
 
-        <ul className=" max-md:hidden flex ">
-          <li className="">
-            <Link href={"projects"}>
-              <Button button_text={"Projects"} />
-            </Link>
-          </li>
+        <ul className=" max-md:hidden flex  items-center pr-4">
+          {session ? (
+            <li className=" font-serif text-xl pr-4">
+              <p>Hi, {session?.userName} </p>
+            </li>
+          ) : (
+            ""
+          )}
+
           <li className=" ">
             <Link href={"portfolio"}>
               <Button button_text={"Portfolio"} />
@@ -52,19 +63,15 @@ const Navbar = () => {
               <Button button_text={"Code_Bits"} />
             </Link>
           </li>
-          <li className="">
-            <Link href={"signup"}>
-              <Button button_text={"Sign up"} />
-            </Link>
-          </li>
+
           {isLoggedin ? (
+            ""
+          ) : (
             <li className="">
               <Link href={"login"}>
                 <Button button_text={"Login"} />
               </Link>
             </li>
-          ) : (
-            ""
           )}
           {isLoggedin ? (
             <li className="">
@@ -77,6 +84,13 @@ const Navbar = () => {
           )}
         </ul>
         <div className=" md:hidden overflow-hidden mr-3" onClick={showMenu}>
+          {session ? (
+            <p className=" font-serif text-xl pr-4 float-left">
+              Hi, {session?.userName}
+            </p>
+          ) : (
+            ""
+          )}
           <button className="  md:hidden  text-xl flex flex-col  p-2">
             {dropmenu ? <BiX /> : <BiMenu />}
           </button>
@@ -87,12 +101,6 @@ const Navbar = () => {
                 : "hidden    md:hidden text-white  box-border  bg-gray-900  p-1 rounded fixed top-16 right-0 text-lg"
             }
           >
-            <Link
-              href="projects"
-              className="  hover:bg-slate-700 px-6 py-2 rounded  block"
-            >
-              Projects
-            </Link>
             <Link
               href="portfolio"
               className=" hover:bg-slate-700 px-6 py-2 rounded block"
@@ -111,12 +119,12 @@ const Navbar = () => {
             >
               Code_Bits
             </Link>
-            <Link
+            {/* <Link
               href="signup"
               className=" hover:bg-slate-700 px-6 py-2 rounded block"
             >
               Sign up
-            </Link>
+            </Link> */}
             <Link
               href="login"
               className=" hover:bg-slate-700 px-6 py-2 rounded block"
