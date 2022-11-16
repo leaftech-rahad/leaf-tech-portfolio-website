@@ -21,7 +21,7 @@ const Form = ({
         <div>{children}</div>
         <div className=" text-center">
           <Button
-            className={" w-full mt-3 md:py-3 bg-green-500 " + button_className}
+            className={button_className}
             button_text={button_text}
             type="submit"
             disabled={button_disabled}

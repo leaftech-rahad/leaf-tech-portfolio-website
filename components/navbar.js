@@ -6,9 +6,10 @@ import { useState } from "react";
 import { BiMenu, BiX } from "react-icons/bi";
 import Button from "../components/button";
 import { useSession } from "next-auth/react";
+import { FiUserCheck } from "react-icons/fi";
 
 const Navbar = () => {
-  var { data: session, status } = useSession();
+  const { data: session, status } = useSession();
 
   const [dropmenu, setDropmenu] = useState(false);
 
@@ -42,99 +43,125 @@ const Navbar = () => {
         <ul className=" max-md:hidden flex  items-center pr-4">
           {session ? (
             <li className=" font-serif text-xl pr-4">
-              <p>Hi, {session?.userName} </p>
+              <p>
+                Hello,{" "}
+                <span className=" text-green-500">{session?.userName}</span>
+              </p>
             </li>
           ) : (
             ""
           )}
 
           <li className=" ">
-            <Link href={"portfolio"}>
-              <Button button_text={"Portfolio"} />
+            <Link href={"/portfolio"}>
+              <Button
+                button_text={"Portfolio"}
+                className={
+                  " border-navbar hover:border-green-500 hover:text-green-500 transition-colors"
+                }
+              />
             </Link>
           </li>
           <li className=" ">
-            <Link href={"contact"}>
-              <Button button_text={"Contact_me"} />
+            <Link href={"/contact"}>
+              <Button
+                button_text={"Contact_me"}
+                className={
+                  " border-navbar hover:border-green-500 hover:text-green-500 transition-colors"
+                }
+              />
             </Link>
           </li>
           <li className="">
-            <Link href={"code_bits"}>
-              <Button button_text={"Code_Bits"} />
+            <Link href={"/code_bits"}>
+              <Button
+                button_text={"Code_Bits"}
+                className={
+                  " border-navbar hover:border-green-500 hover:text-green-500 transition-colors"
+                }
+              />
             </Link>
           </li>
 
           {isLoggedin ? (
-            ""
+            <>
+              <li className=" text-white  border-2 rounded-md border-navbar hover:border-green-500 hover:text-green-500 transition duration-700">
+                <Link href={"/dashboard/user"} className="p-2 text-lg block">
+                  <FiUserCheck />
+                </Link>
+              </li>
+              <li className="">
+                <Link href={"/logout"}>
+                  <Button
+                    button_text={"Logout"}
+                    className={
+                      " border-navbar hover:border-red-500 hover:text-red-500"
+                    }
+                  />
+                </Link>
+              </li>
+            </>
           ) : (
             <li className="">
-              <Link href={"login"}>
-                <Button button_text={"Login"} />
+              <Link href={"/login"}>
+                <Button
+                  button_text={"Login"}
+                  className={
+                    " border-navbar hover:border-green-500 hover:text-green-500 transition-colors"
+                  }
+                />
               </Link>
             </li>
-          )}
-          {isLoggedin ? (
-            <li className="">
-              <Link href={"logout"}>
-                <Button button_text={"Logout"} />
-              </Link>
-            </li>
-          ) : (
-            ""
           )}
         </ul>
         <div className=" md:hidden overflow-hidden mr-3" onClick={showMenu}>
           {session ? (
             <p className=" font-serif text-xl pr-4 float-left">
-              Hi, {session?.userName}
+              Hello,{" "}
+              <span className=" text-green-500">{session?.userName}</span>
             </p>
           ) : (
             ""
           )}
-          <button className="  md:hidden  text-xl flex flex-col p-1 border-2 rounded hover:text-green-500 hover:border-green-500">
+          <button className="  md:hidden  text-xl flex flex-col p-1 border-2 rounded hover:text-green-500 hover:border-green-500 transition-colors ">
             {dropmenu ? <BiX /> : <BiMenu />}
           </button>
           <div
             className={
               dropmenu
-                ? "block   md:hidden text-white  box-border  bg-gray-900  p-1 rounded fixed top-16 right-0 text-lg mr-2"
-                : "hidden    md:hidden text-white  box-border  bg-gray-900  p-1 rounded fixed top-16 right-0 text-lg"
+                ? "block   md:hidden text-white  box-border  bg-gray-700  p-1 rounded fixed top-16 right-0 text-lg mr-2"
+                : "hidden"
             }
           >
             <Link
-              href="portfolio"
-              className=" hover:bg-slate-700 px-6 py-2 rounded block"
+              href="/portfolio"
+              className="  hover:text-green-500 border-2 border-gray-700 transition duration-300 hover:border-green-500 px-6 py-2 rounded block"
             >
               Portfolio
             </Link>
             <Link
-              href="contact"
-              className=" hover:bg-slate-700 px-6 py-2 rounded block"
+              href="/contact"
+              className="  hover:text-green-500 border-2 border-gray-700 transition-colors duration-300 hover:border-green-500 px-6 py-2 rounded block"
             >
               Contact_me
             </Link>
             <Link
-              href="code_bits"
-              className=" hover:bg-slate-700 px-6 py-2 rounded block"
+              href="/code_bits"
+              className="  hover:text-green-500 border-2 border-gray-700 transition-colors duration-300 hover:border-green-500 px-6 py-2 rounded block"
             >
               Code_Bits
             </Link>
-            {/* <Link
-              href="signup"
-              className=" hover:bg-slate-700 px-6 py-2 rounded block"
-            >
-              Sign up
-            </Link> */}
+
             <Link
-              href="login"
-              className=" hover:bg-slate-700 px-6 py-2 rounded block"
+              href="/login"
+              className="  hover:text-green-500 border-2 border-gray-700 transition-colors duration-300 hover:border-green-500 px-6 py-2 rounded block"
             >
               Login
             </Link>
             {!signout ? (
               <Link
-                href="logout"
-                className=" hover:bg-slate-700 px-6 py-2 rounded block"
+                href="/logout"
+                className="  hover:text-green-500 border-2 border-gray-700 transition-colors duration-300 hover:border-green-500 px-6 py-2 rounded block"
               >
                 Logout
               </Link>

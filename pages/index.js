@@ -22,7 +22,7 @@ export default function Home() {
           </p>
           <p className=" text-lg">Full-Stack Developer.</p>
           <p className="  text-lg mt-4">
-            Following the letest techs and industry leading coding standards.
+            Following the latest techs and industry leading coding standards.
           </p>
           <div className=" flex flex-row flex-wrap items-center justify-between w-full mt-4 justify-items-stretch gap-y-2">
             <a href="https://nodejs.org/en/" target="_blank" rel="noreferrer">

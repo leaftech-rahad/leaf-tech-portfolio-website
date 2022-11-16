@@ -24,6 +24,8 @@ const Login = ({ csrfToken }) => {
     } else {
       setshowSignupCard(true);
     }
+    setpassword(" ");
+    setrpassword(" ");
   }
 
   const [rpassword, setrpassword] = React.useState(" ");
@@ -42,12 +44,16 @@ const Login = ({ csrfToken }) => {
           csrfToken={csrfToken}
           action="/api/auth/callback/credentials"
           button_className={
-            password === rpassword ? " bg-green-500" : " bg-red-500"
+            showSignupCard
+              ? password === rpassword
+                ? " w-full mt-3 md:py-3  border-black bg-white border-green-500 hover:bg-green-500"
+                : " w-full mt-3 md:py-3  border-black bg-red-500 font-bold border-red-500 hover:bg-red-500"
+              : " w-full mt-3 md:py-3  border-black bg-white border-green-500 hover:bg-green-500"
           }
           button_text={
             showSignupCard
               ? password === rpassword
-                ? "Sign up"
+                ? "Create account"
                 : "Passwords did not match"
               : "Sign in"
           }
@@ -100,10 +106,10 @@ const Login = ({ csrfToken }) => {
                     type={"password"}
                     name="rpassword"
                     onChange={inrpassword}
-                    className={
+                    input_className={
                       password === rpassword
-                        ? "outline-green-500"
-                        : "outline-red-500"
+                        ? " outline-none  "
+                        : "outline-none border-red-500 "
                     }
                     lable={"rpassword"}
                   />
@@ -112,7 +118,12 @@ const Login = ({ csrfToken }) => {
               <div>
                 <label>
                   Phone
-                  <Input type={"text"} name="phone" lable={"phone"} />
+                  <Input
+                    type={"text"}
+                    name="phone"
+                    lable={"phone"}
+                    input_className={"outline-green-500"}
+                  />
                 </label>
               </div>
               <div>
@@ -149,7 +160,7 @@ const Login = ({ csrfToken }) => {
             <div className="h-[2px] bg-green-500 my-3"></div>
             <p className=" text-center">Already have an account?</p>
             <Button
-              className="w-full  md:py-3 bg-green-500"
+              className=" w-full  md:py-3 bg-white border-green-500  hover:bg-green-500  hover:text-black hover:border-green-500  transition-colors"
               button_text={"Sign in"}
               onClick={handelsignupCard}
             />
@@ -159,8 +170,8 @@ const Login = ({ csrfToken }) => {
             <div className="h-[2px] bg-green-500 my-3"></div>
             <p className=" text-center">Don&apos;t have an account?</p>
             <Button
-              className="w-full  md:py-3 bg-green-500"
-              button_text={"Sign up"}
+              className="w-full  md:py-3 bg-white border-green-500  hover:bg-green-500  hover:text-black hover:border-green-500  transition-colors"
+              button_text={"Create account"}
               onClick={handelsignupCard}
             />
           </>
