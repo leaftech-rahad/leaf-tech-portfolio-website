@@ -157,7 +157,7 @@ export default function Portfolio() {
           </table>
         </div>
         <a
-          href="/CV- Faisal Ahamed Rahad.pdf"
+          href="/CV-Faisal Ahamed Rahad.pdf"
           target="_blank"
           rel="noopener noreferrer"
           download
