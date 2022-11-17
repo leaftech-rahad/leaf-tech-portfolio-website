@@ -162,7 +162,12 @@ export default function Portfolio() {
           rel="noopener noreferrer"
           download
         >
-          <Button className={"font-bold px-2 "} button_text={"Download CV"} />
+          <Button
+            className={
+              "font-bold px-2 hover:border-green-500 hover:text-green-500 transition-colors "
+            }
+            button_text={"Download CV"}
+          />
         </a>
       </div>
     </div>
