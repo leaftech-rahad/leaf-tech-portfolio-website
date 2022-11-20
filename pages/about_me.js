@@ -157,13 +157,9 @@ export default function Portfolio() {
           </table>
         </div>
         <div className=" col-span-full ">
-          <Card />
+          <Card>Personal info</Card>
         </div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+
         <a
           href="/CV-Faisal Ahamed Rahad.pdf"
           target="_blank"

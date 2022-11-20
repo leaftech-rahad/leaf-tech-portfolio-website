@@ -11,7 +11,7 @@ const Input = ({
   return (
     <input
       className={
-        " rounded-lg w-full  h-8 text-center px-2 border-2 " + input_className
+        " rounded-lg w-full  h-10 text-center px-2 border-2 " + input_className
       }
       type={type}
       name={name}

@@ -7,6 +7,7 @@ import { BiMenu, BiX } from "react-icons/bi";
 import Button from "../components/button";
 import { useSession } from "next-auth/react";
 import { FiUserCheck } from "react-icons/fi";
+import CButton from "../components/customeButton";
 
 const Navbar = () => {
   const { data: session, status } = useSession();
@@ -46,10 +47,20 @@ const Navbar = () => {
             ""
           )}
 
+          <li>
+            <a
+              href="/CV-Faisal Ahamed Rahad.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              download
+            >
+              <CButton button_text={"Download my CV"} />
+            </a>
+          </li>
           <li className=" ">
-            <Link href={"/portfolio"}>
+            <Link href={"/about_me"}>
               <Button
-                button_text={"Portfolio"}
+                button_text={"About me"}
                 className={
                   " border-navbar hover:border-green-500 hover:text-green-500 transition-colors"
                 }
@@ -57,9 +68,9 @@ const Navbar = () => {
             </Link>
           </li>
           <li className=" ">
-            <Link href={"/contact"}>
+            <Link href={"/contact_me"}>
               <Button
-                button_text={"Contact_me"}
+                button_text={"Contact me"}
                 className={
                   " border-navbar hover:border-green-500 hover:text-green-500 transition-colors"
                 }
@@ -128,16 +139,16 @@ const Navbar = () => {
             }
           >
             <Link
-              href="/portfolio"
+              href="/about_me"
               className="  hover:text-green-500 border-2 border-gray-700 transition duration-300 hover:border-green-500 px-6 py-2 rounded block "
             >
-              Portfolio
+              About me
             </Link>
             <Link
               href="/contact"
               className="  hover:text-green-500 border-2 border-gray-700 transition-colors duration-300 hover:border-green-500 px-6 py-2 rounded block"
             >
-              Contact_me
+              Contact me
             </Link>
             <Link
               href="/code_bits"

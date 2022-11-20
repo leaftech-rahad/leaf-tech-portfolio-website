@@ -9,11 +9,14 @@ const Form = ({
   button_text,
   button_className,
   button_disabled,
+  form_className,
 }) => {
   return (
     <>
       <form
-        className="text-center flex flex-col flex-wrap gap-3 "
+        className={
+          "text-center flex flex-col flex-wrap gap-3 " + form_className
+        }
         action={action}
         method="post"
       >

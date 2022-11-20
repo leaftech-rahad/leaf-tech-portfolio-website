@@ -38,8 +38,8 @@ const Login = ({ csrfToken }) => {
   }
 
   return (
-    <div className=" m-auto md:w-[440px] mt-20 ">
-      <Card>
+    <div className="  md:w-[440px] mt-20 m-auto">
+      <Card className={"py-10 my-20 mx-4"}>
         <Form
           csrfToken={csrfToken}
           action="/api/auth/callback/credentials"
@@ -58,10 +58,11 @@ const Login = ({ csrfToken }) => {
               : "Sign in"
           }
           button_disabled={password === rpassword ? "" : "disabled"}
+          form_className={""}
         >
           {showSignupCard ? (
             <>
-              <p className=" flex justify-center text-4xl pb-2 text-blue-500 ">
+              <p className=" flex justify-center text-4xl pb-5 text-blue-500 ">
                 <FaUserAlt />
               </p>
               <div>

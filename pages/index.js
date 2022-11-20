@@ -3,28 +3,30 @@ import styles from "../styles/gradient.module.css";
 import { FaServer, FaDatabase } from "react-icons/fa";
 import { MdVerifiedUser } from "react-icons/md";
 import { GoBrowser } from "react-icons/go";
+import CButton from "../components/customeButton";
+import Card from "../components/card";
 
 export default function Home() {
   return (
     <div>
-      <div className=" text-2xl flex flex-row flex-wrap justify-evenly md:flex-row-reverse items-center pt-5  m-auto  ">
-        <div className="relative ">
-          <div className=" absolute bg-gradient-to-tl from-lime-300 via-green-400 to-blue-500  inset-0 blur-lg "></div>
+      <div className=" text-2xl flex flex-row flex-wrap justify-evenly md:flex-row-reverse items-center m-auto my-56 max-lg:my-8">
+        <div className="relative pr-1">
+          <div className=" absolute bg-gradient-to-tl from-lime-300 via-green-400 to-blue-500  inset-0 blur-xl "></div>
           <Image
             alt="Profile-Picture"
             src="/logo.png"
-            width={120}
+            width={140}
             height={80}
-            className="  relative bg-black"
+            className="  relative bg-black mb-5"
           />
         </div>
-        <div className=" flex-auto max-w-screen-lg flex flex-col flex-wrap items-start  p-4 ">
+        <div className=" flex-auto max-w-screen-lg flex flex-col flex-wrap items-start px-3  ">
           <h1 className=" text-3xl  ">Hello, I&apos;m </h1>
           <p className=" text-4xl">
             Faisal Ahamed{" "}
             <span className={" font-bold " + styles.span}>Rahad</span>
           </p>
-          <p className=" text-lg">Full-Stack Developer.</p>
+          <p className=" text-lg">A Full-Stack Developer.</p>
           <p className="  text-lg mt-4">
             Following the latest techs and industry leading coding standards.
           </p>
@@ -166,8 +168,13 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <div className=" flex flex-row  items-center justify-center box-border h-8 gap-5">
+        <a href="#work">
+          <CButton button_text={"Check my projects"} className={""} />
+        </a>
+      </div>
       <div className=" flex flex-row flex-wrap justify-evenly  m-4 pt-10 pb-10 gap-5 text-slate-300  ">
-        <div className=" w-96 p-4  flex flex-wrap items-center flex-col  rounded-lg backdrop-blur-3xl bg-slate-600 ">
+        <div className=" w-96 p-4  flex flex-wrap items-center flex-col  rounded-lg  bg-slate-600 ">
           <GoBrowser className=" text-5xl  " />
           <p className=" text-3xl">Frontend</p>
           <p className=" text-justify  text-md font-sans">
@@ -190,7 +197,7 @@ export default function Home() {
             Frontend appealing and user friendly.
           </p>
         </div>
-        <div className=" w-96 p-4  flex flex-wrap items-center flex-col  rounded-lg backdrop-blur-3xl bg-slate-600 ">
+        <div className=" w-96 p-4  flex flex-wrap items-center flex-col  rounded-lg  bg-slate-600 ">
           <FaServer className=" text-5xl " />
           <p className=" text-3xl ">Backend</p>
           <p className=" text-justify  text-md font-sans">
@@ -211,7 +218,7 @@ export default function Home() {
             then 3 years as my Backend.
           </p>
         </div>
-        <div className=" w-96 p-4  flex flex-wrap items-center flex-col  rounded-lg backdrop-blur-3xl bg-slate-600 ">
+        <div className=" w-96 p-4  flex flex-wrap items-center flex-col  rounded-lg  bg-slate-600 ">
           <MdVerifiedUser className=" text-5xl " />
           <p className=" text-3xl ">Authentication</p>
           <p className=" text-justify  text-md font-sans">
@@ -228,7 +235,7 @@ export default function Home() {
             <span className="font-bold text-blue-500">Next-Auth</span>.
           </p>
         </div>
-        <div className=" w-96 p-4  flex flex-wrap items-center flex-col  rounded-lg backdrop-blur-3xl bg-slate-600 ">
+        <div className=" w-96 p-4  flex flex-wrap items-center flex-col  rounded-lg  bg-slate-600 ">
           <FaDatabase className=" text-5xl " />
           <p className=" text-3xl ">Database</p>
           <p className=" text-justify  text-md font-sans">
@@ -254,6 +261,12 @@ export default function Home() {
             learn it as well.
           </p>
         </div>
+      </div>
+      <div className=" flex flex-col  items-center justify-center m-12 gap-5">
+        <Card className={" w-full"}>project</Card>
+        <Card className={" w-full"}>project</Card>
+        <Card className={" w-full"}>project</Card>
+        <Card className={" w-full"}>project</Card>
       </div>
     </div>
   );
