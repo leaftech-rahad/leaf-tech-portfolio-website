@@ -9,7 +9,8 @@ module.exports = {
       colors: {
         navbar: "#161B22",
       },
+
+      plugins: [],
     },
   },
-  plugins: [],
 };

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import styles from "../styles/gradient.module.css";
 import { FaServer, FaDatabase } from "react-icons/fa";
 import { MdVerifiedUser } from "react-icons/md";
 import { GoBrowser } from "react-icons/go";
@@ -7,18 +8,21 @@ export default function Home() {
   return (
     <div>
       <div className=" text-2xl flex flex-row flex-wrap justify-evenly md:flex-row-reverse items-center pt-5  m-auto  ">
-        <Image
-          alt="Profile-Picture"
-          src="/logo.png"
-          width={220}
-          height={80}
-          className=" max-md:p-10 "
-        />
+        <div className="relative ">
+          <div className=" absolute bg-gradient-to-tl from-lime-300 via-green-400 to-blue-500  inset-0 blur-lg "></div>
+          <Image
+            alt="Profile-Picture"
+            src="/logo.png"
+            width={120}
+            height={80}
+            className="  relative bg-black"
+          />
+        </div>
         <div className=" flex-auto max-w-screen-lg flex flex-col flex-wrap items-start  p-4 ">
           <h1 className=" text-3xl  ">Hello, I&apos;m </h1>
           <p className=" text-4xl">
             Faisal Ahamed{" "}
-            <span className=" font-bold text-green-500">Rahad</span>
+            <span className={" font-bold " + styles.span}>Rahad</span>
           </p>
           <p className=" text-lg">Full-Stack Developer.</p>
           <p className="  text-lg mt-4">
@@ -63,7 +67,7 @@ export default function Home() {
                 src="/nextauth.png"
                 width={38}
                 height={40}
-                className=" bg-blue   "
+                className="   rounded "
               />
             </a>
             <a
@@ -74,9 +78,9 @@ export default function Home() {
               <Image
                 alt="passportJs"
                 src="/passportJs.png"
-                width={48}
+                width={38}
                 height={100}
-                className="  p-1 rounded "
+                className="rounded "
               />
             </a>
             <a href="https://www.nginx.com/" target="_blank" rel="noreferrer">
@@ -125,7 +129,7 @@ export default function Home() {
                 src="/gql.png"
                 width={40}
                 height={40}
-                className="   "
+                className="bg-white rounded  "
               />
             </a>
             <a
@@ -162,11 +166,11 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className=" flex flex-row flex-wrap justify-evenly  m-4 pt-10 pb-10 gap-8 2xl:gap-1 xl:gap-1  text-blue-500  ">
-        <div className="  xl:max-w-xs  2xl:max-w-md bg-[#161B22]   p-4  flex flex-wrap items-center flex-col border-2 rounded-lg border-stone-700 ">
+      <div className=" flex flex-row flex-wrap justify-evenly  m-4 pt-10 pb-10 gap-5 text-slate-300  ">
+        <div className=" w-96 p-4  flex flex-wrap items-center flex-col  rounded-lg backdrop-blur-3xl bg-slate-600 ">
           <GoBrowser className=" text-5xl  " />
           <p className=" text-3xl">Frontend</p>
-          <p className="text-green-500 text-justify  text-md font-sans">
+          <p className=" text-justify  text-md font-sans">
             <span className="font-bold text-blue-500">Frontend</span> looks and
             design of a website does matter. It is the first thing that a user
             comes in contact with when visiting a website. No matter how fast
@@ -186,10 +190,10 @@ export default function Home() {
             Frontend appealing and user friendly.
           </p>
         </div>
-        <div className=" xl:max-w-xs 2xl:max-w-md bg-[#161B22]  p-4   max-sm:p-4 flex flex-wrap items-center flex-col border-2 rounded-lg border-stone-700">
+        <div className=" w-96 p-4  flex flex-wrap items-center flex-col  rounded-lg backdrop-blur-3xl bg-slate-600 ">
           <FaServer className=" text-5xl " />
           <p className=" text-3xl ">Backend</p>
-          <p className="text-green-500 text-justify  text-md font-sans">
+          <p className=" text-justify  text-md font-sans">
             After the Frontend comes{" "}
             <span className="font-bold text-blue-500">Backend</span>, which is
             by all means the brain of a website. It controls{" "}
@@ -207,10 +211,10 @@ export default function Home() {
             then 3 years as my Backend.
           </p>
         </div>
-        <div className=" xl:max-w-xs 2xl:max-w-md bg-[#161B22]  p-4  max-sm:p-4 flex flex-wrap items-center flex-col border-2 rounded-lg border-stone-700">
+        <div className=" w-96 p-4  flex flex-wrap items-center flex-col  rounded-lg backdrop-blur-3xl bg-slate-600 ">
           <MdVerifiedUser className=" text-5xl " />
           <p className=" text-3xl ">Authentication</p>
-          <p className="text-green-500 text-justify  text-md font-sans">
+          <p className=" text-justify  text-md font-sans">
             <span className="font-bold text-blue-500">Authentication</span> is a
             vital part of any signin based website, where each user have their
             unique set of priviledges and services. There are two methods of
@@ -224,10 +228,10 @@ export default function Home() {
             <span className="font-bold text-blue-500">Next-Auth</span>.
           </p>
         </div>
-        <div className=" xl:max-w-xs 2xl:max-w-md bg-[#161B22]  p-4  sm:p-4 flex flex-wrap items-center flex-col border-2 rounded-lg border-stone-700">
+        <div className=" w-96 p-4  flex flex-wrap items-center flex-col  rounded-lg backdrop-blur-3xl bg-slate-600 ">
           <FaDatabase className=" text-5xl " />
           <p className=" text-3xl ">Database</p>
-          <p className="text-green-500 text-justify  text-md font-sans">
+          <p className=" text-justify  text-md font-sans">
             <span className="font-bold text-blue-500">Database</span> stores all
             necessy data that a dynamic website needs to work.
             <span className="font-bold text-blue-500"> NoSQL</span> and{" "}

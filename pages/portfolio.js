@@ -1,16 +1,17 @@
 import React from "react";
 import Button from "../components/button";
+import Card from "../components/card";
 
 export default function Portfolio() {
   return (
     <div>
-      <div className=" flex flex-col flex-wrap m-4  gap-8  items-center justify-evenly pb-5 pt-5">
-        <div className=" w-full md:w-2/3 bg-[#161B22] p-6 rounded-2xl text-lg md:text-lg 2xl:text-xl flex flex-col flex-wrap items-center">
-          <h1 className=" text-3xl font-bold">IELTS</h1>
+      <div className="grid grid-cols-1 2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 m-4 gap-8">
+        <div className=" min-w-80 bg-slate-600 p-6 rounded-2xl text-lg md:text-lg 2xl:text-xl ">
+          <h1 className=" text-3xl font-bold text-center">IELTS</h1>
           <p className=" text-center">
             International English Language Testing System
           </p>
-          <table className=" text-center border-stone-500 border border-collapse  ">
+          <table className=" font-sans text-center border-stone-500 border border-collapse w-full ">
             <thead>
               <tr className="border-stone-500 border border-collapse">
                 <th className="border-stone-500 border border-collapse p-2">
@@ -33,12 +34,12 @@ export default function Portfolio() {
             </tbody>
           </table>
         </div>
-        <div className=" w-full md:w-2/3 bg-[#161B22] p-6 rounded-2xl text-lg md:text-lg 2xl:text-xl flex flex-col flex-wrap items-center">
-          <h1 className=" text-3xl font-bold">M.Sc</h1>
+        <div className=" min-w-80 bg-slate-600 p-6 rounded-2xl text-lg md:text-lg 2xl:text-xl ">
+          <h1 className=" text-3xl font-bold text-center">M.Sc</h1>
           <p className=" text-center">Master of Science</p>
-          <p>Jahangirnagar University</p>
-          <address>Savar, Dhaka.</address>
-          <table className=" text-center border-stone-500 border border-collapse ">
+          <p className=" text-center">Jahangirnagar University</p>
+          <address className=" text-center">Savar, Dhaka.</address>
+          <table className=" font-sans text-center border-stone-500 border border-collapse w-full ">
             <thead>
               <tr className="border-stone-500 border border-collapse">
                 <th className="border-stone-500 border border-collapse p-2">
@@ -63,14 +64,14 @@ export default function Portfolio() {
             </tbody>
           </table>
         </div>
-        <div className=" w-full md:w-2/3 bg-[#161B22] p-6 rounded-2xl text-lg md:text-lg 2xl:text-xl flex flex-col flex-wrap items-center">
-          <h1 className=" text-3xl font-bold">B.Sc</h1>
+        <div className=" min-w-80 bg-slate-600 p-6 rounded-2xl text-lg md:text-lg 2xl:text-xl ">
+          <h1 className=" text-3xl font-bold text-center">B.Sc</h1>
           <p className=" text-center">
             Bachalor of Science &#10098;Honours&#10099;
           </p>
-          <p>Gono Bishwabidyalay</p>
-          <address>Mirzanagar, Savar, Dhaka.</address>
-          <table className=" text-center border-stone-500 border border-collapse ">
+          <p className=" text-center">Gono Bishwabidyalay</p>
+          <address className=" text-center">Mirzanagar, Savar, Dhaka.</address>
+          <table className=" font-sans text-center border-stone-500 border border-collapse w-full ">
             <thead>
               <tr className="border-stone-500 border border-collapse">
                 <th className="border-stone-500 border border-collapse p-2">
@@ -90,18 +91,17 @@ export default function Portfolio() {
                 <td className="border-stone-500 border border-collapse">
                   2016
                 </td>
-                <td className="p-2">3.41 on a scale of 4</td>
+                <td className="p-2">3.41 out of 4</td>
               </tr>
             </tbody>
           </table>
         </div>
-
-        <div className=" w-full md:w-2/3 bg-[#161B22] p-6 rounded-2xl text-lg md:text-lg 2xl:text-xl flex flex-col flex-wrap items-center">
-          <h1 className=" text-3xl font-bold">HSC</h1>
+        <div className=" min-w-80 bg-slate-600 p-6 rounded-2xl text-lg md:text-lg 2xl:text-xl ">
+          <h1 className=" text-3xl font-bold text-center">HSC</h1>
           <p className=" text-center">Higher Secondary School Cirtificate</p>
-          <p>Bepza Public College</p>
-          <address>Ashulia, Savar, Dhaka.</address>
-          <table className=" text-center border-stone-500 border border-collapse ">
+          <p className=" text-center">Bepza Public College</p>
+          <address className=" text-center">Ashulia, Savar, Dhaka.</address>
+          <table className=" font-sans text-center border-stone-500 border border-collapse w-full ">
             <thead>
               <tr className="border-stone-500 border border-collapse">
                 <th className="border-stone-500 border border-collapse p-2">
@@ -121,17 +121,17 @@ export default function Portfolio() {
                 <td className="border-stone-500 border border-collapse">
                   2016
                 </td>
-                <td className="p-2">4.92 on a scale of 5</td>
+                <td className="p-2">4.92 out of 5</td>
               </tr>
             </tbody>
           </table>
         </div>
-        <div className=" w-full md:w-2/3 bg-[#161B22] p-6 rounded-2xl text-lg md:text-lg 2xl:text-xl flex flex-col flex-wrap items-center">
-          <h1 className=" text-3xl font-bold">SSC </h1>
+        <div className=" min-w-80 bg-slate-600 p-6 rounded-2xl text-lg md:text-lg 2xl:text-xl ">
+          <h1 className=" text-3xl font-bold text-center">SSC </h1>
           <p className=" text-center">Secondary School Cirtificate</p>
-          <p>Adarsha High School</p>
-          <address>Ashulia, Savar, Dhaka.</address>
-          <table className=" text-center border-stone-500 border border-collapse ">
+          <p className=" text-center">Adarsha High School</p>
+          <address className=" text-center">Ashulia, Savar, Dhaka.</address>
+          <table className=" font-sans text-center border-stone-500 border border-collapse w-full ">
             <thead>
               <tr className="border-stone-500 border border-collapse">
                 <th className="border-stone-500 border border-collapse p-2">
@@ -151,20 +151,29 @@ export default function Portfolio() {
                 <td className="border-stone-500 border border-collapse">
                   2014
                 </td>
-                <td className="p-2">5 on a scale of 5</td>
+                <td className="p-2">5 out of 5</td>
               </tr>
             </tbody>
           </table>
         </div>
+        <div className=" col-span-full ">
+          <Card />
+        </div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
         <a
           href="/CV-Faisal Ahamed Rahad.pdf"
           target="_blank"
           rel="noopener noreferrer"
           download
+          className="m-auto col-span-full "
         >
           <Button
             className={
-              "font-bold px-2 hover:border-green-500 hover:text-green-500 transition-colors "
+              "font-bold px-2 hover:border-green-500 hover:text-green-500 transition-colors m-auto"
             }
             button_text={"Download CV"}
           />
