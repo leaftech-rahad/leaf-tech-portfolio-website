@@ -5,7 +5,7 @@ import Footer from "./footer";
 
 const Layout = ({ children }) => {
   return (
-    <div className={"text-white font-mono " + styles.div}>
+    <div className={"text-white font-mono  " + styles.div}>
       <Navbar />
       <main className=" min-h-screen">{children}</main>
       <Footer />

@@ -145,7 +145,7 @@ const Navbar = () => {
               About me
             </Link>
             <Link
-              href="/contact"
+              href="/contact_me"
               className="  hover:text-green-500 border-2 border-gray-700 transition-colors duration-300 hover:border-green-500 px-6 py-2 rounded block"
             >
               Contact me

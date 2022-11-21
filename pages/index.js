@@ -5,11 +5,12 @@ import { MdVerifiedUser } from "react-icons/md";
 import { GoBrowser } from "react-icons/go";
 import CButton from "../components/customeButton";
 import Card from "../components/card";
+import Button from "../components/button";
 
 export default function Home() {
   return (
     <div>
-      <div className=" text-2xl flex flex-row flex-wrap justify-evenly md:flex-row-reverse items-center m-auto my-56 max-lg:my-8">
+      <div className=" text-2xl flex flex-row flex-wrap justify-evenly md:flex-row-reverse items-center m-auto mt-60 mb-32 max-lg:mt-8 max-lg:mb-20">
         <div className="relative pr-1">
           <div className=" absolute bg-gradient-to-tl from-lime-300 via-green-400 to-blue-500  inset-0 blur-xl "></div>
           <Image
@@ -32,13 +33,7 @@ export default function Home() {
           </p>
           <div className=" flex flex-row flex-wrap items-center justify-between w-full mt-4 justify-items-stretch gap-y-2">
             <a href="https://nodejs.org/en/" target="_blank" rel="noreferrer">
-              <Image
-                alt="nodeJs"
-                src="/node.png"
-                width={40}
-                height={40}
-                className="    "
-              />
+              <Image alt="nodeJs" src="/node.png" width={40} height={40} />
             </a>
 
             <a href="https://nextjs.org/" target="_blank" rel="noreferrer">
@@ -168,13 +163,13 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className=" flex flex-row  items-center justify-center box-border h-8 gap-5">
+      <div className=" flex flex-row  items-center justify-center box-border h-8  pb-64 max-sm:pb-46">
         <a href="#work">
-          <CButton button_text={"Check my projects"} className={""} />
+          <CButton button_text={"Check out my projects"} className={""} />
         </a>
       </div>
-      <div className=" flex flex-row flex-wrap justify-evenly  m-4 pt-10 pb-10 gap-5 text-slate-300  ">
-        <div className=" w-96 p-4  flex flex-wrap items-center flex-col  rounded-lg  bg-slate-600 ">
+      <div className="work flex flex-row flex-wrap justify-evenly  m-4 pt-10 gap-5 text-slate-300  ">
+        <div className="  w-[450px] p-4  flex flex-wrap items-center flex-col  rounded-lg  bg-slate-600 ">
           <GoBrowser className=" text-5xl  " />
           <p className=" text-3xl">Frontend</p>
           <p className=" text-justify  text-md font-sans">
@@ -197,7 +192,7 @@ export default function Home() {
             Frontend appealing and user friendly.
           </p>
         </div>
-        <div className=" w-96 p-4  flex flex-wrap items-center flex-col  rounded-lg  bg-slate-600 ">
+        <div className="  w-[450px] p-4  flex flex-wrap items-center flex-col  rounded-lg  bg-slate-600 ">
           <FaServer className=" text-5xl " />
           <p className=" text-3xl ">Backend</p>
           <p className=" text-justify  text-md font-sans">
@@ -218,7 +213,7 @@ export default function Home() {
             then 3 years as my Backend.
           </p>
         </div>
-        <div className=" w-96 p-4  flex flex-wrap items-center flex-col  rounded-lg  bg-slate-600 ">
+        <div className="  w-[450px] p-4  flex flex-wrap items-center flex-col  rounded-lg  bg-slate-600 ">
           <MdVerifiedUser className=" text-5xl " />
           <p className=" text-3xl ">Authentication</p>
           <p className=" text-justify  text-md font-sans">
@@ -235,7 +230,7 @@ export default function Home() {
             <span className="font-bold text-blue-500">Next-Auth</span>.
           </p>
         </div>
-        <div className=" w-96 p-4  flex flex-wrap items-center flex-col  rounded-lg  bg-slate-600 ">
+        <div className=" w-[450px]  p-4  flex flex-wrap items-center flex-col  rounded-lg  bg-slate-600 ">
           <FaDatabase className=" text-5xl " />
           <p className=" text-3xl ">Database</p>
           <p className=" text-justify  text-md font-sans">
@@ -262,11 +257,74 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <div className=" flex flex-col  items-center justify-center m-12 gap-5">
-        <Card className={" w-full"}>project</Card>
-        <Card className={" w-full"}>project</Card>
-        <Card className={" w-full"}>project</Card>
-        <Card className={" w-full"}>project</Card>
+      <div id="work"></div>
+      <div className=" flex flex-col  items-center justify-center mx-4 my-24 gap-5">
+        <Card
+          className={
+            " flex flex-wrap  flex-col bg-gradient-to-bl  from-green-400 to-sky-500"
+          }
+        >
+          <h1 className=" text-2xl text-center">Personal Website</h1>
+          <p className=" text-xl text-center py-3">Tech-Stack</p>
+          <p className=" text-lg text-left ">
+            Frontend:{" "}
+            <span className="text-slate-100">
+              NEXT.JS, Tailwind, React-icons.
+            </span>
+          </p>
+          <p className=" text-lg text-left">
+            Backend:{" "}
+            <span className="text-slate-100">
+              NEXT.JS(node.js), GraphQL, React-Query, GraphQl-request,
+              apollo-server-micro, Cors, graphql-codegen.
+            </span>
+          </p>
+          <p className=" text-lg text-left">
+            Database: <span className="text-slate-100">PostgreSQL.</span>
+          </p>
+          <p className=" text-lg text-left">
+            ORM: <span className="text-slate-100">Prisma.</span>
+          </p>
+          <p className=" text-lg text-left">
+            Authentication:{" "}
+            <span className="text-slate-100">Next-auth, Bcryptjs, joi.</span>
+          </p>
+          <p className=" text-lg text-left">
+            Deployment:{" "}
+            <span className="text-slate-100">
+              App: Vercel, Database: Filess.
+            </span>
+          </p>
+          <div className=" flex flex-wrap justify-center text-lg text-white p-4">
+            <a
+              href="https://github.com/leaftech-rahad/leaf-tech-portfolio-website"
+              target="_blank"
+              rel="noreferrer"
+              className=" m-2  "
+            >
+              <Button
+                button_text={"View Code"}
+                className="w-28 hover:font-bold hover:text-purple-600 hover:border-purple-500 "
+              />
+            </a>
+          </div>
+          <p className=" text-xl text-center pb-2">Brief summery</p>
+          <p className=" text-md ">
+            This is a personal website of mine and I'm actively developing it.
+            It utilizes both SSR and SSG as well as authentication for its
+            users. Main attraction of this website is its serverless graphql
+            API.
+          </p>
+        </Card>
+        <Card className={" w-full flex place-content-center flex-wrap "}>
+          <h1 className=" text-2xl ">Coming soon.</h1>
+        </Card>
+        <Card className={" w-full flex place-content-center flex-wrap "}>
+          <h1 className=" text-2xl ">Coming soon.</h1>
+        </Card>
+        <Card className={" w-full flex place-content-center flex-wrap "}>
+          <h1 className=" text-2xl ">Coming soon.</h1>
+        </Card>
       </div>
     </div>
   );

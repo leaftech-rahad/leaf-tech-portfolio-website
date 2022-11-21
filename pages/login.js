@@ -38,17 +38,17 @@ const Login = ({ csrfToken }) => {
   }
 
   return (
-    <div className="  md:w-[440px] mt-20 m-auto">
-      <Card className={"py-10 my-20 mx-4"}>
+    <div className="  md:w-[440px] m-auto">
+      <Card className={"mx-4 m-12 bg-slate-100"}>
         <Form
           csrfToken={csrfToken}
           action="/api/auth/callback/credentials"
           button_className={
             showSignupCard
               ? password === rpassword
-                ? " w-full mt-3 md:py-3  border-black bg-white border-green-500 hover:bg-green-500"
+                ? " w-full mt-3 py-3  border-black bg-white border-green-500 hover:bg-green-500"
                 : " w-full mt-3 md:py-3  border-black bg-red-500 font-bold border-red-500 hover:bg-red-500"
-              : " w-full mt-3 md:py-3  border-black bg-white border-green-500 hover:bg-green-500"
+              : " w-full mt-3 py-3  border-black bg-white border-green-500 hover:bg-green-500"
           }
           button_text={
             showSignupCard
@@ -161,7 +161,7 @@ const Login = ({ csrfToken }) => {
             <div className="h-[2px] bg-green-500 my-3"></div>
             <p className=" text-center">Already have an account?</p>
             <Button
-              className=" w-full  md:py-3 bg-white border-green-500  hover:bg-green-500  hover:text-black hover:border-green-500  transition-colors"
+              className=" w-full  py-3 bg-white border-green-500  hover:bg-green-500  hover:text-black hover:border-green-500  transition-colors"
               button_text={"Sign in"}
               onClick={handelsignupCard}
             />
@@ -171,7 +171,7 @@ const Login = ({ csrfToken }) => {
             <div className="h-[2px] bg-green-500 my-3"></div>
             <p className=" text-center">Don&apos;t have an account?</p>
             <Button
-              className="w-full  md:py-3 bg-white border-green-500  hover:bg-green-500  hover:text-black hover:border-green-500  transition-colors"
+              className="w-full  py-3 bg-white border-green-500  hover:bg-green-500  hover:text-black hover:border-green-500  transition-colors"
               button_text={"Create account"}
               onClick={handelsignupCard}
             />
