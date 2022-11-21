@@ -310,8 +310,8 @@ export default function Home() {
           </div>
           <p className=" text-xl text-center pb-2">Brief summery</p>
           <p className=" text-md ">
-            This is a personal website of mine and I'm actively developing it.
-            It utilizes both SSR and SSG as well as authentication for its
+            This is a personal website of mine and I&apos;m actively developing
+            it. It utilizes both SSR and SSG as well as authentication for its
             users. Main attraction of this website is its serverless graphql
             API.
           </p>
