@@ -18,10 +18,10 @@ export default function Home() {
             src="/logo.png"
             width={140}
             height={80}
-            className="  relative bg-black mb-5"
+            className="  relative bg-black mb-5 "
           />
         </div>
-        <div className=" flex-auto max-w-screen-lg flex flex-col flex-wrap items-start px-3  ">
+        <div className=" flex-auto max-w-screen-lg flex flex-col flex-wrap items-start px-3 max-xl:max-w-[865px]  ">
           <h1 className=" text-3xl  ">Hello, I&apos;m </h1>
           <p className=" text-4xl">
             Faisal Ahamed{" "}
@@ -31,7 +31,7 @@ export default function Home() {
           <p className="  text-lg mt-4">
             Following the latest techs and industry leading coding standards.
           </p>
-          <div className=" flex flex-row flex-wrap items-center justify-between w-full mt-4 justify-items-stretch gap-y-2">
+          <div className=" flex flex-row flex-wrap items-center justify-between w-full max-md:max-w-3xl mt-4 justify-items-stretch gap-y-2">
             <a href="https://nodejs.org/en/" target="_blank" rel="noreferrer">
               <Image alt="nodeJs" src="/node.png" width={40} height={40} />
             </a>
@@ -163,7 +163,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className=" flex flex-row  items-center justify-center box-border h-8  pb-64 max-sm:pb-46">
+      <div className=" flex flex-row  items-center justify-center box-border h-8 pb-80 max-sm:pb-46">
         <a href="#work">
           <CButton button_text={"Check out my projects"} className={""} />
         </a>
@@ -261,7 +261,7 @@ export default function Home() {
       <div className=" flex flex-col  items-center justify-center mx-4 my-24 gap-5">
         <Card
           className={
-            " flex flex-wrap  flex-col bg-gradient-to-bl  from-green-400 to-sky-500"
+            " flex flex-wrap  flex-col bg-gradient-to-bl  from-green-400 to-sky-500 max-w-4xl"
           }
         >
           <h1 className=" text-2xl text-center">Personal Website</h1>
