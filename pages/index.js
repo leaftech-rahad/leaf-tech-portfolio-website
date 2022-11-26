@@ -316,8 +316,55 @@ export default function Home() {
             API.
           </p>
         </Card>
-        <Card className={" w-full flex place-content-center flex-wrap "}>
-          <h1 className=" text-2xl ">Coming soon.</h1>
+        <Card
+          className={
+            " flex flex-wrap  flex-col bg-gradient-to-bl  from-green-400 to-sky-500 max-w-4xl"
+          }
+        >
+          <h1 className=" text-2xl text-center">
+            Express App template with Pug and Tailwind
+          </h1>
+          <p className=" text-xl text-center py-3">Tech-Stack</p>
+          <p className=" text-lg text-left ">
+            Frontend:{" "}
+            <span className="text-slate-100">View engine(pug), Tailwind.</span>
+          </p>
+          <p className=" text-lg text-left">
+            Backend: <span className="text-slate-100">Nodejs, Expressjs.</span>
+          </p>
+          <p className=" text-lg text-left">
+            Database: <span className="text-slate-100">None.</span>
+          </p>
+          <p className=" text-lg text-left">
+            ORM: <span className="text-slate-100">None.</span>
+          </p>
+          <p className=" text-lg text-left">
+            Authentication:{" "}
+            <span className="text-slate-100">Bcryptjs, joi.</span>
+          </p>
+          <p className=" text-lg text-left">
+            Deployment:{" "}
+            <span className="text-slate-100">App: Vercel, Heroku.</span>
+          </p>
+          <div className=" flex flex-wrap justify-center text-lg text-white p-4">
+            <a
+              href="https://github.com/leaftech-rahad/express_barebone_app_pug_tailwind"
+              target="_blank"
+              rel="noreferrer"
+              className=" m-2  "
+            >
+              <Button
+                button_text={"View Code"}
+                className="w-28 hover:font-bold hover:text-purple-600 hover:border-purple-500 "
+              />
+            </a>
+          </div>
+          <p className=" text-xl text-center pb-2">Brief summery</p>
+          <p className=" text-md ">
+            This is a starting template for express app with nodejs and view
+            engine. It is very similar to express-generator because it is based
+            of on it with some modifications.
+          </p>
         </Card>
         <Card className={" w-full flex place-content-center flex-wrap "}>
           <h1 className=" text-2xl ">Coming soon.</h1>
