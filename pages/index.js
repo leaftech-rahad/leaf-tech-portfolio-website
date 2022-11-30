@@ -380,8 +380,8 @@ export default function Home() {
           <p className=" text-md ">
             This is a starting template for express app with nodejs and view
             engine. It is very similar to express-generator because it is based
-            of on it with some modifications. Although it is deployed there is
-            nithing to see. This is just to demonstrate that I can build and
+            of on it with some modifications. Although it is deployed, there is
+            nothing to see. This is just to demonstrate that I can build and
             deploy Nodejs apps.
           </p>
         </Card>
