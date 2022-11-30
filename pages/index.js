@@ -313,12 +313,19 @@ export default function Home() {
             This is a personal website of mine and I&apos;m actively developing
             it. It utilizes both SSR and SSG as well as authentication for its
             users. Main attraction of this website is its serverless graphql
-            API.
+            API.{" "}
+            <span className=" font-bold text-zinc-100">
+              Checkout Authentication and Authorization of this website by
+              Creating an account and logging in.(You can use dummy data if you
+              want NB. database that is used is a free tier database, please be
+              patient if your account is not created on the first try.)
+            </span>
+            Dummy account: Username: john123 Password: 12345 .
           </p>
         </Card>
         <Card
           className={
-            " flex flex-wrap  flex-col bg-gradient-to-bl  from-green-400 to-sky-500 max-w-4xl"
+            " flex flex-wrap  flex-col bg-gradient-to-bl  from-sky-500 to-green-400 max-w-4xl"
           }
         >
           <h1 className=" text-2xl text-center">
@@ -343,8 +350,7 @@ export default function Home() {
             <span className="text-slate-100">Bcryptjs, joi.</span>
           </p>
           <p className=" text-lg text-left">
-            Deployment:{" "}
-            <span className="text-slate-100">App: Vercel, Heroku.</span>
+            Deployment: <span className="text-slate-100">App: Render.</span>
           </p>
           <div className=" flex flex-wrap justify-center text-lg text-white p-4">
             <a
@@ -358,12 +364,25 @@ export default function Home() {
                 className="w-28 hover:font-bold hover:text-purple-600 hover:border-purple-500 "
               />
             </a>
+            <a
+              href="https://express-app-sr0p.onrender.com/"
+              target="_blank"
+              rel="noreferrer"
+              className=" m-2  "
+            >
+              <Button
+                button_text={"View App"}
+                className="w-28 hover:font-bold hover:text-purple-600 hover:border-purple-500 "
+              />
+            </a>
           </div>
           <p className=" text-xl text-center pb-2">Brief summery</p>
           <p className=" text-md ">
             This is a starting template for express app with nodejs and view
             engine. It is very similar to express-generator because it is based
-            of on it with some modifications.
+            of on it with some modifications. Although it is deployed there is
+            nithing to see. This is just to demonstrate that I can build and
+            deploy Nodejs apps.
           </p>
         </Card>
         <Card className={" w-full flex place-content-center flex-wrap "}>
