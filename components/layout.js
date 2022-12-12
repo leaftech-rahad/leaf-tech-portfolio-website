@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../styles/gradient.module.css";
 import Navbar from "./navbar";
-import Footer from "./footer";
+import { Footer } from "./footer";
 
 const Layout = ({ children }) => {
   return (

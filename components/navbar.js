@@ -4,10 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { BiMenu, BiX } from "react-icons/bi";
-import Button from "../components/button";
+import { Button } from "../components/button";
 import { useSession } from "next-auth/react";
 import { FiUserCheck } from "react-icons/fi";
-import CButton from "../components/customeButton";
+import { CButton } from "../components/customeButton";
 
 const Navbar = () => {
   const { data: session, status } = useSession();

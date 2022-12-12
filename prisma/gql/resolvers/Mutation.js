@@ -1,5 +1,9 @@
 import prisma from "../../db";
 import bcrypt from "bcryptjs";
+
+import fs from "fs";
+import path from "path";
+
 export const Mutation = {
   signup: async (parent, { input }, { req }) => {
     //destructure from input
@@ -41,4 +45,21 @@ export const Mutation = {
     });
     if (deletedUser) return true;
   },
+  /*   addFile: async (parent, { file }, { req }) => {
+    const { filename, mimetype, createReadStream, encoading } = await file;
+    console.log(filename);
+    const stream = createReadStream();
+    const pathName = path.join(__dirname, `/files/${filename}`);
+    console.log(pathName);
+    await stream.pipe(fs.createWriteStream(pathName));
+    const addfile = await prisma.file.create({
+      data: {
+        filename: filename,
+        mimetype: mimetype,
+        path: pathName,
+      },
+    });
+
+    return addfile;
+  },*/
 };

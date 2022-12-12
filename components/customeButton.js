@@ -1,7 +1,7 @@
 import React from "react";
-import Button from "./button";
+import { Button } from "./button";
 
-const CButton = ({ button_text, className }) => {
+export const CButton = ({ button_text, className }) => {
   return (
     <div className=" relative w-fit box-border hover:p-1">
       <div className=" absolute bg-gradient-to-br from-lime-300 via-red-500 to-sky-500 inset-0 rounded blur "></div>
@@ -16,5 +16,3 @@ const CButton = ({ button_text, className }) => {
     </div>
   );
 };
-
-export default CButton;

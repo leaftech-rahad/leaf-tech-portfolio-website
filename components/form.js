@@ -1,8 +1,8 @@
 import * as React from "react";
-import Button from "../components/button";
-import Input from "../components/input";
+import { Button } from "../components/button";
+import { Input } from "../components/input";
 
-const Form = ({
+export const Form = ({
   csrfToken,
   action,
   children,
@@ -10,6 +10,8 @@ const Form = ({
   button_className,
   button_disabled,
   form_className,
+  buttonClick,
+  buttonType,
 }) => {
   return (
     <>
@@ -26,13 +28,12 @@ const Form = ({
           <Button
             className={button_className}
             button_text={button_text}
-            type="submit"
+            type={buttonType}
             disabled={button_disabled}
+            onClick={buttonClick}
           />
         </div>
       </form>
     </>
   );
 };
-
-export default Form;

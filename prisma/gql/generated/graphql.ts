@@ -14,6 +14,15 @@ export type Scalars = {
   Int: number;
   Float: number;
   DateTime: any;
+  Upload: any;
+};
+
+export type File = {
+  __typename?: 'File';
+  filename?: Maybe<Scalars['String']>;
+  id: Scalars['ID'];
+  mimetype?: Maybe<Scalars['String']>;
+  path?: Maybe<Scalars['String']>;
 };
 
 export type Message = {
@@ -28,6 +37,7 @@ export type Message = {
 
 export type Mutation = {
   __typename?: 'Mutation';
+  addFile?: Maybe<File>;
   createPost?: Maybe<Post>;
   delAccount?: Maybe<Scalars['Boolean']>;
   deleteMessage?: Maybe<Scalars['Boolean']>;
@@ -37,6 +47,11 @@ export type Mutation = {
   signout?: Maybe<Scalars['Boolean']>;
   signup?: Maybe<User>;
   updatePost?: Maybe<Post>;
+};
+
+
+export type MutationAddFileArgs = {
+  input?: InputMaybe<Addfile>;
 };
 
 
@@ -125,10 +140,14 @@ export type User = {
   message?: Maybe<Array<Maybe<Message>>>;
   password: Scalars['String'];
   phone: Scalars['String'];
-  photo?: Maybe<Scalars['String']>;
+  photo?: Maybe<Array<Maybe<File>>>;
   post?: Maybe<Array<Maybe<Post>>>;
   updatedAt: Scalars['DateTime'];
   userName: Scalars['String'];
+};
+
+export type Addfile = {
+  file: Scalars['Upload'];
 };
 
 export type AuthInfo = {
@@ -191,6 +210,13 @@ export type UserInfo = {
   userName: Scalars['String'];
 };
 
+export type AddFileMutationVariables = Exact<{
+  input?: InputMaybe<Addfile>;
+}>;
+
+
+export type AddFileMutation = { __typename?: 'Mutation', addFile?: { __typename?: 'File', id: string } | null };
+
 export type SignupMutationVariables = Exact<{
   input?: InputMaybe<UserInfo>;
 }>;
@@ -199,6 +225,13 @@ export type SignupMutationVariables = Exact<{
 export type SignupMutation = { __typename?: 'Mutation', signup?: { __typename?: 'User', id: string, userName: string, email: string } | null };
 
 
+export const AddFileDocument = gql`
+    mutation addFile($input: addfile) {
+  addFile(input: $input) {
+    id
+  }
+}
+    `;
 export const SignupDocument = gql`
     mutation signup($input: userInfo) {
   signup(input: $input) {
@@ -216,6 +249,9 @@ const defaultWrapper: SdkFunctionWrapper = (action, _operationName, _operationTy
 
 export function getSdk(client: GraphQLClient, withWrapper: SdkFunctionWrapper = defaultWrapper) {
   return {
+    addFile(variables?: AddFileMutationVariables, requestHeaders?: Dom.RequestInit["headers"]): Promise<AddFileMutation> {
+      return withWrapper((wrappedRequestHeaders) => client.request<AddFileMutation>(AddFileDocument, variables, {...requestHeaders, ...wrappedRequestHeaders}), 'addFile', 'mutation');
+    },
     signup(variables?: SignupMutationVariables, requestHeaders?: Dom.RequestInit["headers"]): Promise<SignupMutation> {
       return withWrapper((wrappedRequestHeaders) => client.request<SignupMutation>(SignupDocument, variables, {...requestHeaders, ...wrappedRequestHeaders}), 'signup', 'mutation');
     }

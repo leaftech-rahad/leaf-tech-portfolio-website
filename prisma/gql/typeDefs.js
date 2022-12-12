@@ -2,6 +2,8 @@ import { gql } from "apollo-server-micro";
 
 export const typeDefs = gql`
   scalar DateTime
+  scalar Upload
+
   type User {
     id: ID!
     firstName: String!
@@ -11,12 +13,13 @@ export const typeDefs = gql`
     password: String!
     phone: String!
     address: String!
-    photo: String
+    photo: [File]
     createdAt: DateTime!
     updatedAt: DateTime!
     post: [Post]
     message: [Message]
   }
+
   type Message {
     id: ID!
     user: User
@@ -25,6 +28,7 @@ export const typeDefs = gql`
     sentTo: String!
     sentAt: DateTime!
   }
+
   type Post {
     id: ID!
     user: User
@@ -35,6 +39,14 @@ export const typeDefs = gql`
     updatedAt: DateTime!
   }
 
+  type File {
+    id: ID!
+    filename: String
+    mimetype: String
+    path: String
+    file: Upload
+  }
+
   type Query {
     user(input: getUser): User
     allUsers: [User!]!
@@ -42,13 +54,16 @@ export const typeDefs = gql`
     allPosts: [Post!]!
     messages(input: getAllMessagesByUser): [Message!]!
   }
+
   input getUser {
     userName: String
     email: String
   }
+
   input getAllPostsByUser {
     authorId: String!
   }
+
   input getAllMessagesByUser {
     authorId: String!
     sentTo: String!
@@ -64,7 +79,9 @@ export const typeDefs = gql`
     createPost(input: postContent): Post
     updatePost(input: updatePost): Post
     deletePost(input: delPost): Boolean
+    addFile(input: addfile): File
   }
+
   input userInfo {
     firstName: String!
     lastName: String!
@@ -75,32 +92,43 @@ export const typeDefs = gql`
     address: String!
     photo: String
   }
+
   input authInfo {
     userName: String
     email: String
     password: String!
   }
+
   input delAccount {
     id: ID!
   }
+
   input messageContent {
     authorId: String!
     massage: String!
     sentTo: String!
   }
+
   input delMessage {
     id: ID!
   }
+
   input postContent {
     authorId: String!
     title: String!
     post: String!
   }
+
   input updatePost {
     title: String!
     post: String!
   }
+
   input delPost {
     id: ID!
+  }
+
+  input addfile {
+    file: Upload!
   }
 `;

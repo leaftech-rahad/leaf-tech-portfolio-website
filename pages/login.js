@@ -1,10 +1,10 @@
 import * as React from "react";
-import Form from "../components/form";
-import Card from "../components/card";
-import Input from "../components/input";
+import { Form } from "../components/form";
+import { Card } from "../components/card";
+import { Input } from "../components/input";
 import { FaUserAlt } from "react-icons/fa";
 import { FaUserLock } from "react-icons/fa";
-import Button from "../components/button";
+import { Button } from "../components/button";
 
 import { getCsrfToken } from "next-auth/react";
 export async function getServerSideProps(context) {

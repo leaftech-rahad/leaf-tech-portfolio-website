@@ -8,7 +8,7 @@ const SERVER_URL =
     : `http://localhost:3000/api/graphql`;
 
 const gqlClient = new GraphQLClient(SERVER_URL);
-export const { signup } = getSdk(gqlClient);
+export const { addFile } = getSdk(gqlClient);
 
 export const queryClient = new QueryClient({
   defaultOptions: {

@@ -1,0 +1,135 @@
+import React from "react";
+import Button from "../components/button";
+import Card from "../components/card";
+import Form from "../components/form";
+import Input from "../components/input";
+/* import { addFile } from "../config/api";
+import { useMutation } from "react-query"; */
+import { GraphQLClient, gql } from "graphql-request";
+
+const AbcEngine = () => {
+  const [nextStep, setNextStep] = React.useState(false);
+  //const [file, setfile] = React.useState("");
+  async function main(fi) {
+    console.log(fi);
+    const endpoint =
+      process.env.NODE_ENV === "production"
+        ? `https://leaf-tech-portfolio-website.vercel.app/api/graphql`
+        : `http://localhost:3000/api/graphql`;
+
+    const graphQLClient = new GraphQLClient(endpoint, {
+      headers: {
+        "Content-Type": "application/json multipart/form-data",
+      },
+    });
+
+    const mutation = gql`
+      mutation addFile($input: addfile) {
+        addFile(input: $input) {
+          id
+        }
+      }
+    `;
+
+    const variables = {
+      file: fi,
+    };
+    const data = await graphQLClient.request(mutation, variables);
+
+    console.log(JSON.stringify(data, undefined, 2));
+  }
+
+  return (
+    <Card className={" mt-10 mb-10 m-auto w-[380px]"}>
+      <Form
+        button_text={!nextStep ? "Next >>" : "Submit"}
+        buttonClick={(e) => {
+          e.preventDefault();
+          setNextStep(true);
+        }}
+        button_className={!nextStep ? "" : " hidden"}
+      >
+        {!nextStep ? (
+          <>
+            <label>
+              Project Name
+              <Input type={"text"} name="projName" />
+            </label>
+            <label>
+              Project description
+              <Input type={"text"} name="projDes" />
+            </label>
+            <label>
+              Client
+              <Input type={"text"} name="client" />
+            </label>
+            <label>
+              Contractor
+              <Input type={"text"} name="contractor" />
+            </label>
+          </>
+        ) : (
+          <>
+            <label>
+              Project Name
+              <Input type={"text"} name="projName" disabled={true} />
+            </label>
+            <label>
+              Project description
+              <Input type={"text"} name="projDes" disabled={true} />
+            </label>
+            <label>
+              Client
+              <Input type={"text"} name="client" disabled={true} />
+            </label>
+            <label>
+              Contractor
+              <Input type={"text"} name="contractor" disabled={true} />
+            </label>
+            <label>
+              Upload CSV
+              <Input
+                type={"file"}
+                input_className={" h-14 p-1 "}
+                onChange={(e) => {
+                  main(e.target.files[0]);
+                }}
+              />
+            </label>
+            <label>
+              max_X
+              <Input type={"number"} name="contractor" />
+            </label>
+            <label>
+              min_X
+              <Input type={"number"} name="contractor" />
+            </label>
+            <label>
+              max_Y
+              <Input type={"number"} name="contractor" />
+            </label>
+            <label>
+              min_Y
+              <Input type={"number"} name="contractor" />
+            </label>
+            <label>
+              max_Z
+              <Input type={"number"} name="contractor" />
+            </label>
+            <label>
+              min_Z
+              <Input type={"number"} name="contractor" />
+            </label>
+            <Button
+              button_text={"Submit"}
+              buttonType={"submit"}
+              className={" mt-2 "}
+            />
+          </>
+        )}
+      </Form>
+    </Card>
+  );
+};
+
+export default AbcEngine;

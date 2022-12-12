@@ -1,6 +1,6 @@
 import React from "react";
-import Card from "../components/card";
-import Form from "../components/form";
+import { Card } from "../components/card";
+import { Form } from "../components/form";
 
 import { getCsrfToken } from "next-auth/react";
 export async function getServerSideProps(context) {

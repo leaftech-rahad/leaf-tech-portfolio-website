@@ -1,12 +1,13 @@
 import React from "react";
 
-const Input = ({
+export const Input = ({
   type,
   name,
   onChange,
   lable,
   input_className,
   defaultValue,
+  disabled,
 }) => {
   return (
     <input
@@ -19,8 +20,7 @@ const Input = ({
       onChange={onChange}
       lable={lable}
       defaultValue={defaultValue}
+      disabled={disabled}
     />
   );
 };
-
-export default Input;

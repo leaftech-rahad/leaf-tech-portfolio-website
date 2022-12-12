@@ -1,6 +1,6 @@
 import React from "react";
 
-const Button = ({ button_text, className, type, disabled, onClick }) => {
+export const Button = ({ button_text, className, type, disabled, onClick }) => {
   return (
     <button
       className={" p-1 border-2 mx-1 rounded  transition " + className}
@@ -12,5 +12,3 @@ const Button = ({ button_text, className, type, disabled, onClick }) => {
     </button>
   );
 };
-
-export default Button;
