@@ -1,8 +1,10 @@
 import NextAuth from "next-auth";
 import prisma from "../../../prisma/db";
 import CredentialsProvider from "next-auth/providers/credentials";
+import { NextResponse, NextRequest } from "next/server";
 
 import bcrypt from "bcryptjs";
+import { redirect } from "next/dist/server/api-utils";
 async function encrypt(password) {
   const salt = bcrypt.genSaltSync(10);
   const hash = bcrypt.hashSync(password, salt);
@@ -75,6 +77,7 @@ export default NextAuth({
 
         if (bcrypt.compareSync(credentials.password, user.password)) {
           // Any object returned will be saved in `user` property of the JWT
+
           return {
             id: user.id,
             userName: user.userName,
@@ -110,6 +113,28 @@ export default NextAuth({
       return token;
     },
 
+    /* async signIn({ user, account, profile, email, credentials }) {
+      callbacks
+      return "/dashboard/user";
+    },
+    async signOut({ user, account, profile, email, credentials }) {
+      return "/";
+    }, */
+    // async redirect({ url, baseUrl }) {
+    //   console.log(url);
+    //   console.log(baseUrl);
+    //   if (url === baseUrl) return `${baseUrl}/dashboard/user`;
+    //   else if (url === `${baseUrl}/dashboard/user`) return `${baseUrl}`;
+
+    //   /* else if (url === `${baseUrl}/dashboard/user`) */
+    //   console.log("first");
+    //   return baseUrl;
+    //   // else return baseUrl;
+    //    // Allows relative callback URLs
+
+    //   // Allows callback URLs on the same origin
+    //   //else if (new URL(url).origin === baseUrl) return url;
+    // },
     session: ({ session, token, user }) => {
       if (token) {
         (session.id = token.id), (session.userName = token.userName);

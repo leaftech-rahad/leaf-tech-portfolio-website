@@ -1,9 +1,9 @@
 import Image from "next/image";
 import styles from "../styles/gradient.module.css";
-
 import { CButton } from "../components/customeButton";
 import { Card } from "../components/card";
 import { Button } from "../components/button";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -165,7 +165,9 @@ export default function Home() {
         <a href="#work">
           <CButton button_text={"Check out my projects"} className={""} />
         </a>
-        <CButton button_text={"Hire me"} className={""} />
+        <Link href="/contact_me">
+          <CButton button_text={"Hire me"} className={""} />
+        </Link>
       </div>
 
       <div id="work"></div>

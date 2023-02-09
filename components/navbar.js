@@ -14,14 +14,14 @@ const Navbar = () => {
 
   const [dropmenu, setDropmenu] = useState(false);
 
-  var isLoggedin;
+  var isLoggedin = false;
   if (status === "authenticated") {
     isLoggedin = true;
   }
   const showMenu = (event) => {
     setDropmenu((current) => !current);
   };
-  const signout = false;
+
   return (
     <div className="flex flex-col flex-wrap justify-between sticky z-10 top-0">
       <Head>
@@ -157,21 +157,20 @@ const Navbar = () => {
               Code_Bits
             </Link>
 
-            <Link
-              href="/login"
-              className="  hover:text-green-500 border-2 border-gray-700 transition-colors duration-300 hover:border-green-500 px-6 py-2 rounded block"
-            >
-              Login
-            </Link>
-            {!signout ? (
+            {!isLoggedin ? (
+              <Link
+                href="/login"
+                className="  hover:text-green-500 border-2 border-gray-700 transition-colors duration-300 hover:border-green-500 px-6 py-2 rounded block"
+              >
+                Login
+              </Link>
+            ) : (
               <Link
                 href="/logout"
                 className="  hover:text-green-500 border-2 border-gray-700 transition-colors duration-300 hover:border-green-500 px-6 py-2 rounded block"
               >
                 Logout
               </Link>
-            ) : (
-              ""
             )}
           </div>
         </div>
